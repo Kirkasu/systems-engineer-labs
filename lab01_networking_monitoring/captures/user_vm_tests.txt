@@ -1,0 +1,41 @@
+PC1:~# ping -c 4 10.10.10.1
+PING 10.10.10.1 (10.10.10.1): 56 data bytes
+64 bytes from 10.10.10.1: seq=0 ttl=255 time=2.883 ms
+64 bytes from 10.10.10.1: seq=1 ttl=255 time=2.415 ms
+64 bytes from 10.10.10.1: seq=2 ttl=255 time=3.860 ms
+64 bytes from 10.10.10.1: seq=3 ttl=255 time=3.838 ms
+
+--- 10.10.10.1 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 2.415/3.249/3.860 ms
+PC1:~# ping -c 4 10.10.20.50
+PING 10.10.20.50 (10.10.20.50): 56 data bytes
+
+--- 10.10.20.50 ping statistics ---
+4 packets transmitted, 0 packets received, 100% packet loss
+
+
+SRV:/tmp# ping -c 4 10.10.99.1
+PING 10.10.99.1 (10.10.99.1): 56 data bytes
+64 bytes from 10.10.99.1: seq=0 ttl=255 time=4.371 ms
+64 bytes from 10.10.99.1: seq=1 ttl=255 time=5.474 ms
+64 bytes from 10.10.99.1: seq=2 ttl=255 time=4.879 ms
+64 bytes from 10.10.99.1: seq=3 ttl=255 time=3.647 ms
+
+--- 10.10.99.1 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 3.647/4.592/5.474 ms
+
+
+MONITOR:~# ping -c 4 10.10.10.1
+PING 10.10.10.1 (10.10.10.1): 56 data bytes
+64 bytes from 10.10.10.1: seq=0 ttl=255 time=2.424 ms
+64 bytes from 10.10.10.1: seq=1 ttl=255 time=2.557 ms
+64 bytes from 10.10.10.1: seq=2 ttl=255 time=2.530 ms
+64 bytes from 10.10.10.1: seq=3 ttl=255 time=2.554 ms
+
+--- 10.10.10.1 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 2.424/2.516/2.557 ms
+
+

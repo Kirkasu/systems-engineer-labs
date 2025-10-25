@@ -1,0 +1,47 @@
+<mxfile host="app.diagrams.net" modified="2025-10-24T23:55:51.722324" agent="5.0" version="24.6.6" editor="www.diagrams.net">
+  <diagram id="Topo1" name="Lab1-Topology">
+    <mxGraphModel dx="1250" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Core/L3 Switch -->
+        <mxCell id="l3" value="L3-Switch (SVIs)&#10;VLANs: 10/20/99" style="shape=process;whiteSpace=wrap;rounded=1;shadow=0;glass=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="300" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <!-- User Switch -->
+        <mxCell id="sw_users" value="Access-SW (Users VLAN 10)" style="shape=process;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="500" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <!-- Server Switch -->
+        <mxCell id="sw_servers" value="Access-SW (Servers VLAN 20)" style="shape=process;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="500" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <!-- Monitoring Host -->
+        <mxCell id="mon" value="Monitoring Host&#10;(SNMP, Syslog)" style="shape=ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="730" y="140" width="130" height="70" as="geometry"/>
+        </mxCell>
+        <!-- Router/Edge -->
+        <mxCell id="edge" value="Edge/Router&#10;(Outside)" style="shape=process;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="700" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <!-- Links -->
+        <mxCell id="e1" edge="1" parent="1" source="l3" target="sw_users" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="l3" target="sw_servers" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="mon" target="l3" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="l3" target="edge" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Notes -->
+        <mxCell id="note" value="ACLs: Users→Servers only 80/443/1433&#10;SNMP: v2c (RO) or v3&#10;Syslog: test alert" style="shape=note;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="260" height="120" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

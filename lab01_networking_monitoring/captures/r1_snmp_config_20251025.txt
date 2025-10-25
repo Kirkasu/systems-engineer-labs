@@ -1,0 +1,20 @@
+R1#sh run | s snmp
+mmi snmp-timeout 180
+snmp-server group MONGRP v3 priv read MONVIEW 
+snmp-server view MONVIEW iso included
+snmp-server location Lab-DC1
+snmp-server contact IT Ops
+snmp-server chassis-id 
+
+R1#sh snmp engineID
+Local SNMP engineID: 800000090300525400D869B9
+Remote Engine ID          IP-addr    Port
+
+R1#sh snmp user
+
+User name: monuser
+Engine ID: 800000090300525400D869B9
+storage-type: nonvolatile        active
+Authentication Protocol: SHA
+Privacy Protocol: AES128
+Group-name: MONGRP

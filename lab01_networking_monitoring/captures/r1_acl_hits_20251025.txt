@@ -1,0 +1,7 @@
+R1#sh access-lists USERS_TO_SERVERS_POLICY
+Extended IP access list USERS_TO_SERVERS_POLICY
+    10 permit tcp 10.10.10.0 0.0.0.255 10.10.20.0 0.0.0.255 eq www (3 matches)
+    20 permit tcp 10.10.10.0 0.0.0.255 10.10.20.0 0.0.0.255 eq 443 (2 matches)
+    30 permit tcp 10.10.10.0 0.0.0.255 10.10.20.0 0.0.0.255 eq 1433 (2 matches)
+    40 deny ip 10.10.10.0 0.0.0.255 10.10.20.0 0.0.0.255 (21 matches)
+    50 permit ip any any (1511 matches)

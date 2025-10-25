@@ -1,0 +1,54 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram id="Topo1" name="Lab1-Topology">
+    <mxGraphModel dx="937" dy="1155" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l3" value="R1 ROAS&#xa;VLANs: 10/20/99" style="shape=process;whiteSpace=wrap;rounded=1;shadow=0;glass=0;" parent="1" vertex="1">
+          <mxGeometry x="700" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C7jJ1ISKIRwZuWwOORqR-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="sw_users" target="C7jJ1ISKIRwZuWwOORqR-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sw_users" value="Access-SW (Users VLAN 10)" style="shape=process;whiteSpace=wrap;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="500" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C7jJ1ISKIRwZuWwOORqR-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw_servers" target="C7jJ1ISKIRwZuWwOORqR-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sw_servers" value="Access-SW (Servers VLAN 20)" style="shape=process;whiteSpace=wrap;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="980" y="500" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mon" value="Monitoring Host&#xa;(SNMP, Syslog)" style="shape=ellipse;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="445" y="750" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="endArrow=block;" parent="1" source="l3" target="sw_users" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="endArrow=block;" parent="1" source="l3" target="sw_servers" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="endArrow=block;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="mon" target="sw_users" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="ACLs: Users→Servers only 80/443/1433&#xa;SNMP: v2c (RO) or v3&#xa;Syslog: test alert" style="shape=note;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="100" y="100" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C7jJ1ISKIRwZuWwOORqR-1" value="PC1" style="shape=ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="150" y="430" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C7jJ1ISKIRwZuWwOORqR-2" value="PC2" style="shape=ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="150" y="570" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C7jJ1ISKIRwZuWwOORqR-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.974;entryY=0.738;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="sw_users" target="C7jJ1ISKIRwZuWwOORqR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C7jJ1ISKIRwZuWwOORqR-7" value="SRV" style="shape=ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="730" width="130" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
