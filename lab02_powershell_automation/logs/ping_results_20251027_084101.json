@@ -1,0 +1,20 @@
+﻿[
+    {
+        "Host":  "8.8.8.8",
+        "Reachable":  true,
+        "Timestamp":  {
+                          "value":  "\/Date(1761579662475)\/",
+                          "DisplayHint":  2,
+                          "DateTime":  "Monday, October 27, 2025 8:41:02 AM"
+                      }
+    },
+    {
+        "Host":  "1.1.1.1",
+        "Reachable":  true,
+        "Timestamp":  {
+                          "value":  "\/Date(1761579663559)\/",
+                          "DisplayHint":  2,
+                          "DateTime":  "Monday, October 27, 2025 8:41:03 AM"
+                      }
+    }
+]
